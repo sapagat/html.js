@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button example</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+
+<script src='../src/html.js'></script>
+<script>
+var ButtonTemplate = function(){
+  return {
+      button: {
+          id: 'secret',
+          class: 'a-class another-class',
+          innerHTML: 'My Button',
+          onclick: function(){
+              console.log('hello motto!');
+          }
+      }
+  }
+};
+
+var template = new ButtonTemplate();
+var element = HTML.build(template);
+
+var container = document.querySelector('#container');
+container.appendChild(element);
+
+</script>
+</body>
+</html>
